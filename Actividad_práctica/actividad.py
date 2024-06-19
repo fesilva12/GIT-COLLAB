@@ -4,6 +4,7 @@ recargo = 0.03
 deuda_total = 0
 compras = []
 suma = 0
+compras_totales = 0
 
 while True:
     print("""
