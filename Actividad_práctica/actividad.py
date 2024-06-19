@@ -17,6 +17,7 @@ while True:
     match op:
         case "1":
             while True:
+                #Agregar función de compra
                 monto_compra = int(input("Ingrese el monto de la compra: "))
                 nombre_compra = input("Ingrese nombre producto")
                 interes = monto_compra * recargo
@@ -36,6 +37,7 @@ while True:
                 break
         case "2":
             while True:
+                #Agregar funcion deuda
                 pago_deuda = int(input("Ingrese el monto a pagar de la deuda: "))
                 if pago_deuda > -(deuda_total):
                     print(f"Su deuda es de {-(deuda_total)}, no puede pagar más que eso")
