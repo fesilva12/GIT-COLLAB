@@ -6,6 +6,17 @@ compras = []
 suma = 0
 compras_totales = 0
 
+def pagar_deuda(deuda_total):
+    while True:
+        pago_deuda = int(input("Ingrese el monto a pagar de la deuda: "))
+        if pago_deuda > -(deuda_total):
+            print(f"Su deuda es de {-(deuda_total)}, no puede pagar más que eso")
+        if deuda_total == 0:
+            print("usted no tiene deudas pendientes")
+        elif deuda_total < 0:
+            deuda_total += pago_deuda
+            print(deuda_total)
+
 while True:
     print("""
 1.- Comprar
@@ -36,15 +47,7 @@ while True:
                 print(compras)
                 break
         case "2":
-            while True:
-                pago_deuda = int(input("Ingrese el monto a pagar de la deuda: "))
-                if pago_deuda > -(deuda_total):
-                    print(f"Su deuda es de {-(deuda_total)}, no puede pagar más que eso")
-                if deuda_total == 0:
-                    print("usted no tiene deudas pendientes")
-                elif deuda_total < 0:
-                    deuda_total += pago_deuda
-                    print(deuda_total)
+            pagar_deuda(deuda_total)
         case "3":
             print(f""" 
 Cupo total: ${cupo_total}
